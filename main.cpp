@@ -16,7 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -65,9 +70,26 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
-
+    int myAge = 100;
+    int numberOfCats = 10;
+    int numberOfDogs = 5;
+    float myHeight = 5.9f;
+    float desserts = 9.5f;
+    float piecesOfPaper = 5.3f;
+    bool isOn = true;
+    bool isOff = false;
+    bool returnsValue = true;
+    double myWeight = 170.0;
+    double roomLengthInMeters = 12.0;
+    double buildingHeightInFeet = 40.0;
+    char myInitial = 'C';
+    char lastNameInitial = 'D';
+    char nameOfAvenue = 'F';
+    unsigned int myBill = 50;
+    unsigned int numberOfCars = 1;
+    unsigned int customerCount = 10;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, numberOfCats, numberOfDogs, myHeight, desserts, piecesOfPaper, isOn, isOff, returnsValue, myWeight, roomLengthInMeters, buildingHeightInFeet, myInitial, lastNameInitial, nameOfAvenue, myBill, numberOfCars, customerCount); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -82,43 +104,85 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344)
+{
+    ignoreUnused(distanceInMiles, distanceInKilometers);
+}
  */
 
 /*
- 2)
+ 2) bool lightsAreOn(bool isOn = true)
+{
+     ignoreUnused(isOn);
+     {
+     return;
+     }
+}
  */
 
 /*
- 3)
+ 3) int djPlayMusic(int numOfSongsPlayed, int numOfGenres, int setTimeInMinutes = = 20)
+{
+     ignoreUnused(numOfSongsPlayed, numOfGenres, setTimeInMinutes);
+     {
+      return;
+     }
+}
  */
 
 /*
- 4)
+ 4) void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500)
+ {
+      ignoreUnused(distanceTraveled, timeInSpace, speedOfSatellite); 
+ }
  */
 
 /*
- 5)
+ 5) int performingDancers(int numOfDancers, int numOfSongs = 7)
+ {
+      ignoreUnused(numOfDancers, numOfSongs);
+      {
+       return;
+      }
+ }
  */
 
 /*
- 6)
+ 6) void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving)
+ {
+      ignoreUnused(distanceInMiles, amountOfFuelConsumed, timeSpentDriving);
+ }
  */
 
 /*
- 7)
+ 7) void runFromThePolice(int fencesHopped, int policeCars, bool foundSafeHouse = true)
+ {
+      ignoreUnused(fencesHopped, policeCars, foundSafeHouse);
+ }
  */
 
 /*
- 8)
+ 8) void skiDownHill(bool fracturedMyShoulder, float speedTraveled)
+ {
+      ignoreUnused(fracturedMyShoulder, speedTraveled);
+ }
  */
 
 /*
- 9)
+ 9) char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z')
+ {
+      ignoreUnused(firstLetterOfChapter, lastLetterOfChapter);
+      {
+       return;
+      }
+ }
  */
 
 /*
- 10)
+ 10) void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters)
+ {
+      ignoreUnused(numOfChapters, numOfWords, numOfCharacters);
+ }
  */
 
 /*
@@ -140,28 +204,28 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
-    
+//1)
+    int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344);
     //2)
-    
+    bool lightsAreOn(bool isOn = true);
     //3)
-    
+    int djPlayMusic(int numOfSongsPlayed = 20, int numOfGenres = 2, int setTimeInMinutes = 60);
     //4)
-    
+    void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500);
     //5)
-    
+    int performingDancers(int numOfDancers, int numOfSongs = 7);
     //6)
-    
+    void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving);
     //7)
-    
+    void runFromThePolice(int fencesHopped = 5, int policeCars = 2, bool foundSafeHouse = true);
     //8)
-    
+    void skiDownHill(bool fracturedMyShoulder, float speedTraveled);
     //9)
-    
+    char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z');
     //10)
-    
-    
-    ignoreUnused(carRented);
+    void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters = 6000);
+
+    ignoreUnused(carRented, rideMyBike, lightsAreOn, djPlayMusic, satelliteInOrbit, performingDancers, drivingCar, runFromThePolice, skiDownHill, readBook, writeStory);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
