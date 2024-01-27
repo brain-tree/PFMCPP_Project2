@@ -97,93 +97,86 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+/* bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
+*/
 
-/*
- 1) int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344)
+int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344)
 {
     ignoreUnused(distanceInMiles, distanceInKilometers);
+    return {};
 }
- */
 
-/*
- 2) bool lightsAreOn(bool isOn = true)
+
+
+bool lightsAreOn(bool isOn = true)
 {
      ignoreUnused(isOn);
-     {
-     return;
-     }
+     return {};
 }
- */
 
-/*
- 3) int djPlayMusic(int numOfSongsPlayed, int numOfGenres, int setTimeInMinutes = = 20)
+
+
+int djPlayMusic(int numOfSongsPlayed, int numOfGenres, int setTimeInMinutes = 20)
 {
      ignoreUnused(numOfSongsPlayed, numOfGenres, setTimeInMinutes);
-     {
-      return;
-     }
+     return {};
 }
- */
 
-/*
- 4) void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500)
+
+
+void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500)
  {
-      ignoreUnused(distanceTraveled, timeInSpace, speedOfSatellite); 
+      ignoreUnused(distanceTraveledInMiles, timeInSpaceInHours, speedOfSatellite);
  }
- */
 
-/*
- 5) int performingDancers(int numOfDancers, int numOfSongs = 7)
+
+
+int performingDancers(int numOfDancers, int numOfSongs = 7)
  {
       ignoreUnused(numOfDancers, numOfSongs);
-      {
-       return;
-      }
+      return {};
  }
- */
 
-/*
- 6) void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving)
+
+
+void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving)
  {
       ignoreUnused(distanceInMiles, amountOfFuelConsumed, timeSpentDriving);
  }
- */
 
-/*
- 7) void runFromThePolice(int fencesHopped, int policeCars, bool foundSafeHouse = true)
+
+
+void runFromThePolice(int fencesHopped, int policeCars, bool foundSafeHouse = true)
  {
       ignoreUnused(fencesHopped, policeCars, foundSafeHouse);
  }
- */
 
-/*
- 8) void skiDownHill(bool fracturedMyShoulder, float speedTraveled)
+
+
+void skiDownHill(bool fracturedMyShoulder, float speedTraveled)
  {
       ignoreUnused(fracturedMyShoulder, speedTraveled);
  }
- */
 
-/*
- 9) char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z')
+
+
+char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z')
  {
       ignoreUnused(firstLetterOfChapter, lastLetterOfChapter);
-      {
-       return;
-      }
+      return {};
  }
- */
 
-/*
- 10) void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters)
+
+
+void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters = 6000)
  {
       ignoreUnused(numOfChapters, numOfWords, numOfCharacters);
  }
- */
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -202,30 +195,30 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
+//  auto carRented = rentACar(6, 2);
     
 //1)
-    int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344);
-    //2)
-    bool lightsAreOn(bool isOn = true);
-    //3)
-    int djPlayMusic(int numOfSongsPlayed = 20, int numOfGenres = 2, int setTimeInMinutes = 60);
-    //4)
-    void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500);
-    //5)
-    int performingDancers(int numOfDancers, int numOfSongs = 7);
-    //6)
-    void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving);
-    //7)
-    void runFromThePolice(int fencesHopped = 5, int policeCars = 2, bool foundSafeHouse = true);
-    //8)
-    void skiDownHill(bool fracturedMyShoulder, float speedTraveled);
-    //9)
-    char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z');
-    //10)
-    void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters = 6000);
+    auto myBikeRide = rideMyBike(10, 16.09344);
+//2)
+    auto ceilingLights = lightsAreOn(true);
+//3)
+    auto djSet =  djPlayMusic(20, 2, 60);
+//4)
+    satelliteInOrbit(500.f, 1.0, 500);
+//5)
+    auto dancePerformance = performingDancers(7);
+//6)
+    drivingCar(1, 20.f, 3.0);
+//7)
+    runFromThePolice(5, 2, true);
+//8)
+    skiDownHill(true, 10.01f);
+//9)
+    auto readAllOver = readBook('A', 'Z');
+//10)
+    writeStory(6, 1000, 6000);
 
-    ignoreUnused(carRented, rideMyBike, lightsAreOn, djPlayMusic, satelliteInOrbit, performingDancers, drivingCar, runFromThePolice, skiDownHill, readBook, writeStory);
+    ignoreUnused(myBikeRide, ceilingLights, djSet, satelliteInOrbit, dancePerformance, drivingCar, runFromThePolice, skiDownHill, readAllOver, writeStory);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
