@@ -114,68 +114,68 @@ int rideMyBike(int distanceInMiles = 10, double distanceInKilometers = 16.09344)
 
 bool lightsAreOn(bool isOn = true)
 {
-     ignoreUnused(isOn);
-     return {};
+    ignoreUnused(isOn);
+    return {};
 }
 
 
 
 int djPlayMusic(int numOfSongsPlayed, int numOfGenres, int setTimeInMinutes = 20)
 {
-     ignoreUnused(numOfSongsPlayed, numOfGenres, setTimeInMinutes);
-     return {};
+    ignoreUnused(numOfSongsPlayed, numOfGenres, setTimeInMinutes);
+    return {};
 }
 
 
 
 void satelliteInOrbit(float distanceTraveledInMiles = 500.f, double timeInSpaceInHours = 1.0, unsigned int speedOfSatellite = 500)
- {
-      ignoreUnused(distanceTraveledInMiles, timeInSpaceInHours, speedOfSatellite);
- }
+{
+    ignoreUnused(distanceTraveledInMiles, timeInSpaceInHours, speedOfSatellite);
+}
 
 
 
 int performingDancers(int numOfDancers, int numOfSongs = 7)
- {
-      ignoreUnused(numOfDancers, numOfSongs);
-      return {};
- }
+{
+    ignoreUnused(numOfDancers, numOfSongs);
+    return {};
+}
 
 
 
 void drivingCar(int distanceInMiles, float amountOfFuelConsumed, double timeSpentDriving)
- {
-      ignoreUnused(distanceInMiles, amountOfFuelConsumed, timeSpentDriving);
- }
+{
+    ignoreUnused(distanceInMiles, amountOfFuelConsumed, timeSpentDriving);
+}
 
 
 
 void runFromThePolice(int fencesHopped, int policeCars, bool foundSafeHouse = true)
- {
-      ignoreUnused(fencesHopped, policeCars, foundSafeHouse);
- }
+{
+    ignoreUnused(fencesHopped, policeCars, foundSafeHouse);
+}
 
 
 
 void skiDownHill(bool fracturedMyShoulder, float speedTraveled)
- {
-      ignoreUnused(fracturedMyShoulder, speedTraveled);
- }
+{
+    ignoreUnused(fracturedMyShoulder, speedTraveled);
+}
 
 
 
 char readBook(char firstLetterOfChapter = 'A', char lastLetterOfChapter = 'Z')
- {
-      ignoreUnused(firstLetterOfChapter, lastLetterOfChapter);
-      return {};
- }
+{
+    ignoreUnused(firstLetterOfChapter, lastLetterOfChapter);
+    return {};
+}
 
 
 
 void writeStory(int numOfChapters, int numOfWords = 1000, int numOfCharacters = 6000)
- {
-      ignoreUnused(numOfChapters, numOfWords, numOfCharacters);
- }
+{
+    ignoreUnused(numOfChapters, numOfWords, numOfCharacters);
+}
 
 
 /*
